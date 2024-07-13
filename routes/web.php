@@ -33,13 +33,17 @@ Route::get('/signup', function () {
 });
 
 Route::get('/listVehicles', function () {
-    return view('vehicleListing');
+
+    //O cliente é pesquisado por parametro no browser dessa forma: http://127.0.0.1:8000/listVehicles?search=Rodrigo
+    $cliente = request('search');
+
+    return view('vehicleListing', ['cliente' => $cliente]);
 });
 
 //É possível passar parametros da seguinte forma:
-$curDate = $date = date('m/d/Y h:i:s a', time());
+$curDate = date('m/d/Y h:i:s a', time());
 
-Route::get('/logs/{data?}', function ($data = 1) {
+Route::get('/logs/{data?}', function ($data = 'Hoje') {
     return view('logfilter', ['data' => $data]);
 });
 

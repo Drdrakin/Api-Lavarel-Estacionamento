@@ -21,6 +21,26 @@
         <script defer src="/js/script.js"></script>
     </head>
     <body>
+        <header> 
+            <nav class="navbar navbar-expand-lg">
+                <div class="collapse navbar-collapse" id="navbar">
+                    <a href="/" class="navbar-brand">
+                        <img src="/img/icon.webp" alt="">
+                    </a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="/listVehicles" class="nav-link">Veículos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/vehicles" class="nav-link">Cadastrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/logs" class="nav-link">Logs</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
         @yield('content') {{-- yield de 'content' --}}
         <footer>
             <p>Sistema de Estacionamento</p>
