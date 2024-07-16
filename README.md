@@ -1,3 +1,28 @@
+# Sistema de estacionamento
+
+A proposta desse teste é que se faça um CRUD simples para um sistema de estacionamento. Os requisitos mínimos que exigiremos para avaliar suas habilidades são:
+
+- Cadastro de veículos e clientes
+- Listagem de veículos presentes
+- Alteração de dados de veículo e alteração de dados de clientes
+- Exclusão de clientes
+
+*Tecnologias requisitadas:*
+
+- Frontend: Sua preferência, usando pelo menos uma framework
+- Backend: PHP (puro ou framework)
+- Banco de dados: Mysql
+- Hospedagem: XAMPP ou Wamp
+
+*Tarefas bônus:*
+
+- Login simples, com verificação de senha correta
+- Filtro de log de clientes e veículos que passaram pelo sistema, com filtros como data
+- Entregar via repositório no Github
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

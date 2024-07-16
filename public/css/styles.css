@@ -6,3 +6,26 @@
     width: 50px;
     padding-left: 10px;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin-top: 2rem;
+    color: #333;
+    font-size: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.headerFont {
+    font-size: 23px;
+}
+
+.layouticon {
+    width: 50px;
+    height: 50px;
+}

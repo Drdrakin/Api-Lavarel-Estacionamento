@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
-@section('title', 'Cadastrar')
+@section('title', 'Cadastrar Veículo')
 
 @section('content')
-    <h1>Cadastro de Veículos</h1>
+    <h1>Cadastro de Novos Veículos</h1>
 @endsection
     
