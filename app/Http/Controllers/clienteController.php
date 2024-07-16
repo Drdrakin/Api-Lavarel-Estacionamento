@@ -6,17 +6,23 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
 
-class cadastroController extends Controller
+class clienteController extends Controller
 {
     public function index(){
                 
         $clients = Cliente::all();
 
-        return view('welcome', 
-        [
-            'clients'=> $clients
-        ]);
+        return view('welcome');
+    }
 
+    public function show(){
+                
+        $clientes = Cliente::all();
+
+        return view('clientSignup', 
+        [
+            'clientes'=>$clientes
+        ]);
     }
 
     public function create(){

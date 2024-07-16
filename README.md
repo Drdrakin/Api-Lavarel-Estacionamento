@@ -1,6 +1,6 @@
 # Sistema de estacionamento
 
-A proposta desse teste é que se faça um CRUD simples para um sistema de estacionamento. Os requisitos mínimos que exigiremos para avaliar suas habilidades são:
+CRUD simples para um sistema de estacionamento. Requisitos:
 
 - Cadastro de veículos e clientes
 - Listagem de veículos presentes
@@ -19,7 +19,6 @@ A proposta desse teste é que se faça um CRUD simples para um sistema de estaci
 - Login simples, com verificação de senha correta
 - Filtro de log de clientes e veículos que passaram pelo sistema, com filtros como data
 - Entregar via repositório no Github
-
 
 
 

@@ -18,7 +18,8 @@ class Cliente extends Model
         "cadastrado",
         "alterado" 
     ];
-    
+    public $timestamps = false;
+
     public function veiculos()
     {
         return $this->hasMany(Veiculo::class, 'id_cliente');

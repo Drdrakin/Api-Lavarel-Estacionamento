@@ -2,6 +2,7 @@
     font-family: 'Roboto';
 }
 
+/* Layout geral*/
 #navbar img{
     width: 50px;
     padding-left: 10px;
@@ -28,4 +29,31 @@ footer p {
 .layouticon {
     width: 50px;
     height: 50px;
+}
+
+.msg{
+    background-color: floralwhite;
+    color: #333;
+    border: 1px solid #333;
+}
+/* Form de cadastro*/
+.little-margin {
+    padding: 0px;
+    margin: 10px;
+}
+.form-group {
+    padding-bottom: 20px;
+}
+.flex-rows{
+    flex-direction: row;
+}
+
+.btn-primary{
+    background-color: rgb(178, 217, 251);
+    border-color: black;
+    color: #333;
+}
+
+#vehicle-create-container label{
+    font-weight: 700;
 }

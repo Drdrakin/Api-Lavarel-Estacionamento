@@ -39,6 +39,9 @@
                                 <a href="/listVehicles" class="nav-link headerFont">Veículos</a>
                             </li>
                             <li class="nav-item">
+                                <a href="/clientSignup" class="nav-link headerFont">Clientes</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="/vehicles" class="nav-link headerFont">Cadastrar</a>
                             </li>
                             <li class="nav-item">
@@ -50,13 +53,21 @@
             </nav>
         </header>
         <main class="container mt-5 flex-grow-1">
+
+            {{--Flash message de sucesso para o usuário --}}
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             @yield('content') {{-- yield de 'content' --}}
         </main>
         <footer class="bg-dark text-white text-center py-3 mt-auto">
             <p>&copy; 2024 Sistema de Estacionamento</p>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz4fy0c4rT4G1B4x9LU5wE1f92Fu6BVRb7OhZpGhbY4l" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-rbsA2VBKQDNmSBfBaFzpQT4oMfO8R3DOW8mTld1kRYKh6XKpq2gICpWQ1iLnpAQb" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     </body>
 </html>

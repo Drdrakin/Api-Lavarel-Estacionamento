@@ -19,6 +19,10 @@ class Veiculo extends Model
         "hora_saida" 
     ];
 
+    //Essa linha é necessário pois o laravel espera que de padrão as colunas created_at e updated_at existam, mas
+    //nesse projeto como não foi usado migrations, o banco criado direto no MySQL Worbench não constou com esses campos
+    public $timestamps = false;
+
     public function cliente()
     {
         return $this->belongsTo(Cliente::class, 'id_cliente');
