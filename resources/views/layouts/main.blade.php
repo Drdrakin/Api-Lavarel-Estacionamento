@@ -32,9 +32,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
+                            {{--Links para navegação --}}
                             <li class="nav-item">
-                                <a href="/clientSignup" class="nav-link headerFont">Entrar</a>
+                                <a href="/login" class="nav-link headerFont">Entrar</a>
                             </li>
+                            @auth
                             <li class="nav-item">
                                 <a href="/listVehicles" class="nav-link headerFont">Veículos</a>
                             </li>
@@ -47,6 +49,17 @@
                             <li class="nav-item">
                                 <a href="/logs" class="nav-link headerFont">Registros</a>
                             </li>
+                            <li>
+                                <a class="nav-link headerFont" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Sair
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                            @endauth
                         </ul>
                     </div>
                 </div>

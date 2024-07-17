@@ -74,3 +74,10 @@ footer p {
 .form-card{
     display: inline-block;
 }
+
+/* Classes extras de login */
+
+.card-header{
+    background-color: #333;
+    color: aliceblue;
+}

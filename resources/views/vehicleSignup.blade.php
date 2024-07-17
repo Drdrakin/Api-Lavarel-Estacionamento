@@ -49,7 +49,7 @@
                 <label for="telefone">Telefone: </label>
                 <input type="text" class="form-control" id="telefone" name="telefone" placeholder="40028922">
             </div>
-            <input type="submit" class="btn btn-success" value="Registar Cliente">
+            <input type="submit" class="btn btn-success" value="Registrar Cliente">
         </form>
     </div>
 @endsection

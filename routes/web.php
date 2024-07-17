@@ -49,3 +49,10 @@ Route::get('/logs/{data?}', function ($data = 'Hoje') {
     return view('logfilter', ['data' => $data]);
 });
 
+
+//Rotas do laravel ui bootstrap de autenticação
+Auth::routes();
+
+//Home em especifica
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

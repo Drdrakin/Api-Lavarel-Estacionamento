@@ -6,6 +6,6 @@
     <div class="text-center">
         <h1>Bem Vindo ao seu Estacionamento</h1>
         <p class="lead">Gerencie seu estacionamento de forma eficiente e prática.</p>
-        <a href="/clientSignup" class="btn btn-primary">Entrar</a>
+        <a href="/login" class="btn btn-primary">Entrar</a>
     </div>
 @endsection
