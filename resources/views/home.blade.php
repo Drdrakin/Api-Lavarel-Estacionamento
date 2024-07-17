@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Você já está logado, prossiga.
+                    Você já está logado, prossiga ou saia para entrar novamente
                 </div>
             </div>
         </div>

@@ -47,7 +47,7 @@
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                     <label class="form-check-label" for="remember">
-                                        Lembre da senha
+                                        Lembrar da senha
                                     </label>
                                 </div>
                             </div>

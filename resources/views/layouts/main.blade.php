@@ -24,8 +24,12 @@
         <header> 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a href="/" class="navbar-brand layouticon">
-                        <ion-icon name="car-outline" style="width: 40px" class="layouticon"></ion-icon>
+                    <a href="/" class="navbar-brand layouticon d-flex align-items-center">
+                    <ion-icon name="car-outline" style="width: 40px" class="layouticon"></ion-icon>
+                    </a>
+                    <a href="/" class="navbar-brand layouticon d-flex align-items-center">
+
+                        <span class="ms-2">Home</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -53,7 +57,7 @@
                                 <a class="nav-link headerFont" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Sair
+                                    Sair
                                 </a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
