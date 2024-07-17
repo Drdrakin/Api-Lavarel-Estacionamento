@@ -26,7 +26,7 @@
                 <label for="id_cliente">Dono: </label>
                 <input type="text" class="form-control" id="id_cliente" name="id_cliente" placeholder="Fulano de tal">
             </div>
-            <input type="submit" class="btn btn-primary" value="Registrar Veículo">
+            <input type="submit" class="btn btn-success" value="Registrar Veículo">
         </form>
 
         <form action="{{ url("/clientSignup") }}" method="POST" class="forms">
@@ -49,7 +49,7 @@
                 <label for="telefone">Telefone: </label>
                 <input type="text" class="form-control" id="telefone" name="telefone" placeholder="40028922">
             </div>
-            <input type="submit" class="btn btn-primary" value="Registar Cliente">
+            <input type="submit" class="btn btn-success" value="Registar Cliente">
         </form>
     </div>
 @endsection

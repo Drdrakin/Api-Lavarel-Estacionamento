@@ -13,7 +13,7 @@
                     <p class="card-text little-margin">Email: {{$client->email}}</p>
                     <p class="card-text little-margin">Telefone: {{$client->telefone}}</p>
                     <p class="card-text little-margin">Cadastrado: {{$client->cadastrado}}</p>
-                    <a href="#" class="btn btn-primary">Alterar Dados</a>
+                    <a href="/editClient/{{$client->id}}" class="btn btn-success">Alterar Dados</a>
                     <form action="/clientListing/{{$client->id}}" method="POST" class="form-card">
                         @csrf
                         @method('DELETE')

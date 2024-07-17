@@ -64,4 +64,18 @@ class veiculoController extends Controller
 
         return redirect()->route('listVehicles')->with('success', 'Veículo excluído com sucesso!');
     }
+
+    public function edit($id){
+
+        $veiculo = Veiculo::findOrFail($id);
+
+        return view('editVehicle', ['veiculo'=>$veiculo]);
+    }
+
+    public function update(Request $request){
+
+        Veiculo::findOrFail($request->id)->update($request->all());
+
+        return redirect()->route('listVehicles')->with('success', 'Veículo modificado com sucesso!');
+    }
 }
