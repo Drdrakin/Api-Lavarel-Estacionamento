@@ -24,17 +24,26 @@ footer p {
 
 .headerFont {
     font-size: 23px;
+    color: aliceblue;
 }
 
 .layouticon {
     width: 50px;
     height: 50px;
+    color: aliceblue;
 }
 
 .msg{
     background-color: floralwhite;
     color: #333;
     border: 1px solid #333;
+}
+
+.home-class{
+    color: aliceblue;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 10px;
 }
 /* Forms de cadastros*/
 .little-margin {
@@ -73,4 +82,11 @@ footer p {
 
 .form-card{
     display: inline-block;
+}
+
+/* Classes extras de login */
+
+.card-header{
+    background-color: #333;
+    color: aliceblue;
 }

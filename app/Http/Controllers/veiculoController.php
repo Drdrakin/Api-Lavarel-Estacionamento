@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Cliente;  
 use App\Models\Veiculo;
 use Illuminate\Http\RedirectResponse;
 
@@ -28,9 +29,11 @@ class veiculoController extends Controller
 
     public function create(){
 
+        $clients = Cliente::where('deletado', false)->get(); // Filtra apenas pelos clientes não deletados
+
         return view('vehicleSignup', 
         [
-
+            'clients'=>$clients
         ]);
     }
 

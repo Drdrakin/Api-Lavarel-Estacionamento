@@ -22,9 +22,15 @@
                 <label for="cor">Cor: </label>
                 <input type="text" class="form-control" id="cor" name="cor" placeholder="Amarelo estelar">
             </div>
+            {{-- Pegar os clientes ativos do banco, para poder ser selecionado o cliente em vez de passar ID--}}
             <div class="form-group">
                 <label for="id_cliente">Dono: </label>
-                <input type="text" class="form-control" id="id_cliente" name="id_cliente" placeholder="Fulano de tal">
+                <select class="form-control" id="id_cliente" name="id_cliente">
+                    <option value="">Selecione um Cliente</option>
+                    @foreach ($clients as $client)
+                        <option value="{{ $client->id }}">{{ $client->nome }}</option>
+                    @endforeach
+                </select>
             </div>
             <input type="submit" class="btn btn-success" value="Registrar Veículo">
         </form>
@@ -49,7 +55,7 @@
                 <label for="telefone">Telefone: </label>
                 <input type="text" class="form-control" id="telefone" name="telefone" placeholder="40028922">
             </div>
-            <input type="submit" class="btn btn-success" value="Registar Cliente">
+            <input type="submit" class="btn btn-success" value="Registrar Cliente">
         </form>
     </div>
 @endsection
