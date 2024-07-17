@@ -11,11 +11,17 @@ Route::get('/', [clienteController::class, 'index']);
 
 Route::get('/vehicles', [veiculoController::class, 'create']);
 
-Route::get('/clientSignup', [clienteController::class, 'show']);
+Route::get('/clientListing', [clienteController::class, 'show'])->name('clientListing');
 
 Route::get('/listVehicles', [veiculoController::class, 'index'])->name('listVehicles');
 
 Route::post('/vehicles', [veiculoController::class, 'store']);
+
+Route::post('/clientSignup', [clienteController::class, 'store']);
+
+Route::delete('/clientListing/{id}', [clienteController::class, 'destroy']);
+
+Route::delete('/listVehicles/{id}', [veiculoController::class, 'destroy']);
 
 Route::get('/login', function () {
     return view('login');

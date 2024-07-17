@@ -36,7 +36,7 @@ footer p {
     color: #333;
     border: 1px solid #333;
 }
-/* Form de cadastro*/
+/* Forms de cadastros*/
 .little-margin {
     padding: 0px;
     margin: 10px;
@@ -45,15 +45,32 @@ footer p {
     padding-bottom: 20px;
 }
 .flex-rows{
+    display: flex;
     flex-direction: row;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .btn-primary{
-    background-color: rgb(178, 217, 251);
-    border-color: black;
+    background-color: rgb(161, 255, 189);
+    border-color: rgb(22, 211, 161);
     color: #333;
 }
 
 #vehicle-create-container label{
     font-weight: 700;
+}
+
+#vehicle-create-container input{
+    width: 650px;
+}
+
+.forms{
+    padding: 20px;
+}
+
+/* Botões*/
+
+.form-card{
+    display: inline-block;
 }

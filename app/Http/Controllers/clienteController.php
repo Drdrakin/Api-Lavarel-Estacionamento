@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use Illuminate\Http\RedirectResponse;
 
 class clienteController extends Controller
 {
+
     public function index(){
                 
         $clients = Cliente::all();
@@ -19,17 +21,34 @@ class clienteController extends Controller
                 
         $clientes = Cliente::all();
 
-        return view('clientSignup', 
+        return view('clientListing', 
         [
             'clientes'=>$clientes
         ]);
     }
 
-    public function create(){
+    public function store(Request $request){
+                
+        $cliente = new Cliente;
 
-        return view('clientSignup');
-    // Pode-se observar, que nos 2 primeiros exemplos é retornado o objeto{?} com o mesmo nome que a variável local, mas no último não,
-    // pois O QUE É PASSADO PARA A VIEW É A CHAVE
-    // 'bla' não precisa bater na view, mas nomes precisa bater como $nomes na view para resgatar o valor.
+        $cliente->nome = $request->nome;
+        $cliente->email = $request->email;
+        $cliente->senha = $request->senha;
+        $cliente->telefone = $request->telefone;
+
+        $cliente->save();
+
+        return redirect()->route('clientListing')->with('success', 'Cliente cadastrado com sucesso!');
+    }
+
+    public function destroy($id){
+
+        $cliente = Cliente::findOrFail($id);
+
+        $cliente->deletado = 1;
+
+        $cliente->save();
+
+        return redirect()->route('clientListing')->with('success', 'Cliente excluído com sucesso!');
     }
 }

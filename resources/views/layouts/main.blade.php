@@ -39,7 +39,7 @@
                                 <a href="/listVehicles" class="nav-link headerFont">Veículos</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/clientSignup" class="nav-link headerFont">Clientes</a>
+                                <a href="/clientListing" class="nav-link headerFont">Clientes</a>
                             </li>
                             <li class="nav-item">
                                 <a href="/vehicles" class="nav-link headerFont">Cadastrar</a>

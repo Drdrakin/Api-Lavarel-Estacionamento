@@ -53,4 +53,15 @@ class veiculoController extends Controller
 
         return redirect()->route('listVehicles')->with('success', 'Veículo cadastrado com sucesso!');
     }
+
+    public function destroy($id){
+
+        $veiculo = Veiculo::findOrFail($id);
+
+        $veiculo->deletado = 1;
+
+        $veiculo->save();
+
+        return redirect()->route('listVehicles')->with('success', 'Veículo excluído com sucesso!');
+    }
 }

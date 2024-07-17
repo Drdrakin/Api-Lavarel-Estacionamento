@@ -15,6 +15,7 @@ class Cliente extends Model
         "senha", 
         "email",
         "telefone",
+        "deletado",
         "cadastrado",
         "alterado" 
     ];

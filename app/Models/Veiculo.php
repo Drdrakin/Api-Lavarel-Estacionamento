@@ -15,6 +15,7 @@ class Veiculo extends Model
         "modelo", 
         "cor",
         "id_cliente",
+        "deletado",
         "hora_entrada",
         "hora_saida" 
     ];
