@@ -1,48 +1,50 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\clienteController;
+use App\Http\Controllers\veiculoController;
 
-Route::get('/', function () {
+//É passado em um array, o nome da controller com seu tipo- ::class e nome da ACTION 'index'
+//Ou seja, não é passado dados aqui, sendo exclusivo apenas para rotas e actions
+//PS: as controllers precisam ser importadas lá em cima
 
-    $nome = "Guilherme";
-    $arr = [10,20,30,40,50];
-    $bla = ["Maria", "João", "Carlinhos", "Broto", "Antetidigimon", "Lucas Bahia"];
-
-    return view('welcome', 
-    [
-        'nome' => $nome,
-        'arr' => $arr,
-        'nomes' => $bla
-    ]);
-
-    // Pode-se observar, que nos 2 primeiros exemplos é retornado o objeto{?} com o mesmo nome que a variável local, mas no último não,
-    // pois O QUE É PASSADO PARA A VIEW É A CHAVE
-    // 'bla' não precisa bater na view, mas nomes precisa bater como $nomes na view para resgatar o valor.
-});
-
-Route::get('/vehicles', function () {
-    return view('vehicleSignup');
-});
+//Home
+Route::get('/', [clienteController::class, 'index']);
 
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/signup', function () {
-    return view('clientSignup');
-});
+//Rotas de cadastro
+Route::get('/vehicles', [veiculoController::class, 'create']);
 
-Route::get('/listVehicles', function () {
+Route::post('/vehicles', [veiculoController::class, 'store']);
 
-    //O cliente é pesquisado por parametro no browser dessa forma: http://127.0.0.1:8000/listVehicles?search=Rodrigo
-    $cliente = request('search');
+Route::post('/clientSignup', [clienteController::class, 'store']);
 
-    return view('vehicleListing', ['cliente' => $cliente]);
-});
+//Rotas de listagem dos dados
+Route::get('/clientListing', [clienteController::class, 'show'])->name('clientListing');
+
+Route::get('/listVehicles', [veiculoController::class, 'index'])->name('listVehicles');
+
+
+//Rotas para deletar
+Route::delete('/clientListing/{id}', [clienteController::class, 'destroy']);
+
+Route::delete('/listVehicles/{id}', [veiculoController::class, 'destroy']);
+
+//Rotas de update
+///Cliente
+Route::get('/editClient/{id}', [clienteController::class, 'edit']);
+
+Route::put('/editClient/update/{id}', [clienteController::class, 'update']);
+
+///Veiculo
+Route::get('/editVehicle/{id}', [veiculoController::class, 'edit']);
+
+Route::put('/editVehicle/update/{id}', [veiculoController::class, 'update']);
 
 //É possível passar parametros da seguinte forma:
-$curDate = date('m/d/Y h:i:s a', time());
-
 Route::get('/logs/{data?}', function ($data = 'Hoje') {
     return view('logfilter', ['data' => $data]);
 });

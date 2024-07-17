@@ -2,7 +2,75 @@
     font-family: 'Roboto';
 }
 
+/* Layout geral*/
 #navbar img{
     width: 50px;
     padding-left: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    margin-top: 2rem;
+    color: #333;
+    font-size: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.headerFont {
+    font-size: 23px;
+}
+
+.layouticon {
+    width: 50px;
+    height: 50px;
+}
+
+.msg{
+    background-color: floralwhite;
+    color: #333;
+    border: 1px solid #333;
+}
+/* Forms de cadastros*/
+.little-margin {
+    padding: 0px;
+    margin: 10px;
+}
+.form-group {
+    padding-bottom: 20px;
+}
+.flex-rows{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.btn-primary{
+    background-color: rgb(161, 255, 189);
+    border-color: rgb(22, 211, 161);
+    color: #333;
+}
+
+#vehicle-create-container label{
+    font-weight: 700;
+}
+
+#vehicle-create-container input{
+    width: 650px;
+}
+
+.forms{
+    padding: 20px;
+}
+
+/* Botões*/
+
+.form-card{
+    display: inline-block;
 }
