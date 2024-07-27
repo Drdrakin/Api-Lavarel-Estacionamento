@@ -13,7 +13,10 @@ class LogController extends Controller
         // Buscar cores distintas dos veículos
         $cores = Veiculo::select('cor')->distinct()->get();
 
-        return view('logs.index', compact('cores'));
+        //Seleciona todos clientes, até os deletados para registros antigos
+        $clients = Cliente::select('*')->get();
+
+        return view('logs.index', compact('cores', 'clients'));
     }
 
     public function filter(Request $request)
@@ -52,10 +55,12 @@ class LogController extends Controller
             $veiculosQuery->whereIn('id_cliente', $clientesIds);
         }
 
+        $clients = Cliente::select('*')->get();
+
         $clientes = $clientesQuery->get();
         $veiculos = $veiculosQuery->get();
         $cores = Veiculo::select('cor')->distinct()->get();
 
-        return view('logs.index', compact('clientes', 'veiculos', 'cores'));
+        return view('logs.index', compact('clientes', 'veiculos', 'cores', 'clients'));
     }
 }

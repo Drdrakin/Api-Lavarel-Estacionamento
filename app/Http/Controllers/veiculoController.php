@@ -72,7 +72,13 @@ class veiculoController extends Controller
 
         $veiculo = Veiculo::findOrFail($id);
 
-        return view('editVehicle', ['veiculo'=>$veiculo]);
+        $clients = Cliente::select('*')->get();
+        
+        //Query para encontrar a linha do dono da tabela, não retorna como uma propriedade e sim um objeto para maior flexibilidade, 
+        //portanto é necessário ->nome na view 
+        $owner = Cliente::where('id', $veiculo->id_cliente)->first();
+
+        return view('editVehicle', ['veiculo'=>$veiculo, 'clients'=>$clients, 'owner'=>$owner]);
     }
 
     public function update(Request $request){

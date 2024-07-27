@@ -32,10 +32,17 @@
                 @endforeach
             </select>
         </div>
+        
         <div class="form-group mb-3">
-            <label for="dono">Dono:</label>
-            <input type="text" name="dono" id="dono" class="form-control" placeholder="Digite o nome do dono">
+            <label for="id_cliente">Dono: </label>
+                <select class="form-control" id="id_cliente" name="id_cliente">
+                    <option value="">Selecione um Cliente ou deixe em branco para visualizar todos</option>
+                    @foreach ($clients as $client)
+                        <option value="{{ $client->id }}">{{ $client->nome }}</option>
+                    @endforeach
+                </select>
         </div>
+
         <button type="submit" class="btn btn-primary">Filtrar</button>
     </form>
 

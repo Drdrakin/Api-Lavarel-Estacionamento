@@ -25,7 +25,12 @@
             </div>
             <div class="form-group">
                 <label for="id_cliente">Dono: </label>
-                <input type="text" class="form-control" id="id_cliente" name="id_cliente" placeholder="Fulano de tal" value="{{$veiculo->dono}}">
+                <select class="form-control" id="id_cliente" name="id_cliente">
+                    <option value="{{$veiculo->cliente->id}}">{{$owner->nome}}</option>
+                    @foreach ($clients as $client)
+                        <option value="{{ $client->id }}">{{ $client->nome }}</option>
+                    @endforeach
+                </select>
             </div>
             <input type="submit" class="btn btn-success" value="Alterar Dados">
         </form>
